@@ -1,0 +1,869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>800</width>
+     <height>480</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>800</width>
+     <height>480</height>
+    </size>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Light">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Midlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Dark">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Mid">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="BrightText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>33</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Shadow">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="AlternateBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipBase">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>220</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ToolTipText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="PlaceholderText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="128">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 12pt &quot;System&quot;;
+background-color: rgb(0, 33, 0);</string>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+   <property name="plainText">
+    <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!-- A random selection of elements from data.xml
+     Some IDREFS (refs attribute of element pointer) do not have a corresponding id in this sample--&gt;
+&lt;?xml-model href=&quot;data.rnc&quot; type=&quot;application/relax-ng-compact-syntax&quot;?&gt;
+&lt;data version=&quot;3.0&quot;&gt;
+   &lt;synsets source=&quot;dict/data.adj&quot; xml:base=&quot;data.adj.xml&quot;&gt;&lt;!--10 out of 18156 elements--&gt;
+    &lt;synset id=&quot;a00001740&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;able&lt;/word&gt;
+         &lt;pointer refs=&quot;n05200169 n05616246&quot;&gt;Attribute&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n05616246 n05200169&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a00002098&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;def&gt;(usually followed by `to') having the necessary means or skill or know-how or authority to do something&lt;/def&gt;
+         &lt;example&gt;able to swim&lt;/example&gt;
+         &lt;example&gt;she was able to program her computer&lt;/example&gt;
+         &lt;example&gt;we were at last able to buy a car&lt;/example&gt;
+         &lt;example&gt;able to get a grant for the project&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a00327541&quot; type=&quot;s&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;cancellate&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;cancellated&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;cancellous&lt;/word&gt;
+         &lt;pointer refs=&quot;a00327031&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n06057539&quot;&gt;Domain of synset - TOPIC&lt;/pointer&gt;
+         &lt;def&gt;having an open or latticed or porous structure&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a00653822&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;crowned&lt;/word&gt;
+         &lt;pointer refs=&quot;a00654829&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a00654125 a00654315 a00654394 a00654596 a00654685&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;def&gt;provided with or as if with a crown or a crown as specified&lt;/def&gt;
+         &lt;def&gt;often used in combination&lt;/def&gt;
+         &lt;example&gt;a high-crowned hat&lt;/example&gt;
+         &lt;example&gt;an orange-crowned bird&lt;/example&gt;
+         &lt;example&gt;a crowned signet ring&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a00995027&quot; type=&quot;s&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;unsoundable&lt;/word&gt;
+         &lt;pointer refs=&quot;a00994882&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;def&gt;too deep to determine the depth of&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a01331540&quot; type=&quot;s&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;consolidative&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;unifying&lt;/word&gt;
+         &lt;pointer refs=&quot;a01330986&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v00242747 v00242580&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;def&gt;combining into a single unit&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a01656416&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;unspaced&lt;/word&gt;
+         &lt;pointer refs=&quot;a01655783&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a01656520&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;def&gt;arranged without spaces between&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a01988934&quot; type=&quot;s&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;unbooked&lt;/word&gt;
+         &lt;pointer refs=&quot;a01988724&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;def&gt;not reserved in advance&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a02295998&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;00&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;2&quot;&gt;standard&lt;/word&gt;
+         &lt;pointer refs=&quot;a01593649&quot;&gt;Also see&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00033615&quot;&gt;Attribute&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a02297166&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a02296415 a02296632 a02296824 a02296950 a02297089&quot;&gt;Similar to&lt;/pointer&gt;
+         &lt;def&gt;conforming to or constituting a standard of measurement or value&lt;/def&gt;
+         &lt;def&gt;or of the usual or regularized or accepted kind&lt;/def&gt;
+         &lt;example&gt;windows of standard width&lt;/example&gt;
+         &lt;example&gt;standard sizes&lt;/example&gt;
+         &lt;example&gt;the standard fixtures&lt;/example&gt;
+         &lt;example&gt;standard brands&lt;/example&gt;
+         &lt;example&gt;standard operating procedure&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a02610603&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;01&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;alchemic&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;alchemical&lt;/word&gt;
+         &lt;pointer refs=&quot;n05778749&quot; source=&quot;2&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n05778749&quot; source=&quot;2&quot; target=&quot;1&quot;&gt;Pertainym (pertains to noun)&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n05778749&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n05778749&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Pertainym (pertains to noun)&lt;/pointer&gt;
+         &lt;def&gt;related to or concerned with alchemy&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;a02874876&quot; type=&quot;a&quot;&gt;
+         &lt;lex_filenum&gt;01&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;communist&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;communistic&lt;/word&gt;
+         &lt;pointer refs=&quot;n08365855 n06214744&quot; source=&quot;2&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n06214744&quot; source=&quot;2&quot; target=&quot;1&quot;&gt;Pertainym (pertains to noun)&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n06214744&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Pertainym (pertains to noun)&lt;/pointer&gt;
+         &lt;def&gt;relating to or marked by communism&lt;/def&gt;
+         &lt;example&gt;Communist Party&lt;/example&gt;
+         &lt;example&gt;communist governments&lt;/example&gt;
+         &lt;example&gt;communistic propaganda&lt;/example&gt;
+      &lt;/synset&gt;
+   &lt;/synsets&gt;
+   &lt;synsets source=&quot;dict/data.adv&quot; xml:base=&quot;data.adv.xml&quot;&gt;&lt;!--10 out of 3621 elements--&gt;
+    &lt;synset id=&quot;r00001740&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;a cappella&lt;/word&gt;
+         &lt;def&gt;without musical accompaniment&lt;/def&gt;
+         &lt;example&gt;they performed a cappella&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00063369&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;let alone&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;not to mention&lt;/word&gt;
+         &lt;def&gt;much less&lt;/def&gt;
+         &lt;example&gt;she can't boil potatoes, let alone cook a meal&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00116510&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;together&lt;/word&gt;
+         &lt;def&gt;at the same time&lt;/def&gt;
+         &lt;example&gt;we graduated together&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00163236&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;gaily&lt;/word&gt;
+         &lt;pointer refs=&quot;a01367431&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;in a gay manner&lt;/def&gt;
+         &lt;example&gt;the scandals were gaily diverting&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00212411&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;1&quot;&gt;incidentally&lt;/word&gt;
+         &lt;word lex_id=&quot;3&quot;&gt;accidentally&lt;/word&gt;
+         &lt;pointer refs=&quot;a01856929&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;of a minor or subordinate nature&lt;/def&gt;
+         &lt;example&gt;these magnificent achievements were only incidentally influenced by Oriental models&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00261389&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;agonizingly&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;excruciatingly&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;torturously&lt;/word&gt;
+         &lt;pointer refs=&quot;a01711724&quot; source=&quot;3&quot; target=&quot;6&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a01711724&quot; source=&quot;2&quot; target=&quot;3&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a01711724&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;in a very painful manner&lt;/def&gt;
+         &lt;example&gt;the progress was agonizingly slow&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00316486&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;dismally&lt;/word&gt;
+         &lt;word lex_id=&quot;1&quot;&gt;dreadfully&lt;/word&gt;
+         &lt;pointer refs=&quot;a01126291&quot; source=&quot;2&quot; target=&quot;4&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;in a dreadful manner&lt;/def&gt;
+         &lt;example&gt;as he looks at the mess he has left behind he must wonder how the Brits so often managed to succeed in the kind of situation where he has so dismally failed&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00370920&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;conspicuously&lt;/word&gt;
+         &lt;pointer refs=&quot;r00371171&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a02090567&quot; source=&quot;1&quot; target=&quot;3&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;in a manner tending to attract attention&lt;/def&gt;
+         &lt;example&gt;there have been plenty of general declarations about willingness to meet and talk, but conspicuously no mention of time and place&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00423888&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;rallentando&lt;/word&gt;
+         &lt;pointer refs=&quot;n07020895&quot;&gt;Domain of synset - TOPIC&lt;/pointer&gt;
+         &lt;def&gt;slowing down&lt;/def&gt;
+         &lt;example&gt;this passage should be played rallentando&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;r00471945&quot; type=&quot;r&quot;&gt;
+         &lt;lex_filenum&gt;02&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;surpassingly&lt;/word&gt;
+         &lt;pointer refs=&quot;a01676026&quot; source=&quot;1&quot; target=&quot;5&quot;&gt;Derived from adjective&lt;/pointer&gt;
+         &lt;def&gt;to a surpassing degree&lt;/def&gt;
+         &lt;example&gt;she was a surpassingly beautiful woman&lt;/example&gt;
+      &lt;/synset&gt;
+   &lt;/synsets&gt;
+   &lt;synsets source=&quot;dict/data.noun&quot; xml:base=&quot;data.noun.xml&quot;&gt;&lt;!--10 out of 82115 elements--&gt;
+    &lt;synset id=&quot;n00001740&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;03&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;entity&lt;/word&gt;
+         &lt;pointer refs=&quot;n00001930 n00002137 n04424418&quot;&gt;Hyponym&lt;/pointer&gt;
+         &lt;def&gt;that which is perceived or known or inferred to have its own distinct existence (living or nonliving)&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n01608265&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;05&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;honey buzzard&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;Pernis apivorus&lt;/word&gt;
+         &lt;pointer refs=&quot;n01605630&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n01608086&quot;&gt;Member holonym&lt;/pointer&gt;
+         &lt;def&gt;Old World hawk that feeds on bee larvae and small rodents and reptiles&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n03037590&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;06&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;clarence&lt;/word&gt;
+         &lt;pointer refs=&quot;n02968473&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;def&gt;a closed carriage with four wheels and seats for four passengers&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n04421740&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;06&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;thermojunction&lt;/word&gt;
+         &lt;pointer refs=&quot;n03605915&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;def&gt;a junction between two dissimilar metals across which a voltage appears&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n06013298&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;09&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;vector algebra&lt;/word&gt;
+         &lt;pointer refs=&quot;n06012726&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n06000644&quot;&gt;Domain of synset - TOPIC&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n06013471&quot;&gt;Hyponym&lt;/pointer&gt;
+         &lt;def&gt;the part of algebra that deals with the theory of vectors and vector spaces&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n07581132&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;13&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;confit&lt;/word&gt;
+         &lt;pointer refs=&quot;n07653394&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;def&gt;a piece of meat (especially a duck) cooked slowly in its own fat&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n09168592&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;15&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;Black Rock Desert&lt;/word&gt;
+         &lt;pointer refs=&quot;n08505573&quot;&gt;Instance Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n09110422&quot;&gt;Part holonym&lt;/pointer&gt;
+         &lt;def&gt;a desert in northwestern Nevada&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n10604089&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;18&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;sitting duck&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;easy mark&lt;/word&gt;
+         &lt;pointer refs=&quot;n10752480&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;def&gt;a defenseless victim&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n12200143&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;20&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;looking-glass plant&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;Heritiera littoralis&lt;/word&gt;
+         &lt;pointer refs=&quot;n13109733&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;def&gt;small tree of coastal regions of Old World tropics whose leaves are silvery beneath&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;n13804375&quot; type=&quot;n&quot;&gt;
+         &lt;lex_filenum&gt;24&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;paradigm&lt;/word&gt;
+         &lt;pointer refs=&quot;n13803782&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a02965552&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;def&gt;systematic arrangement of all the inflected forms of a word&lt;/def&gt;
+      &lt;/synset&gt;
+   &lt;/synsets&gt;
+   &lt;synsets source=&quot;dict/data.verb&quot; xml:base=&quot;data.verb.xml&quot;&gt;&lt;!--10 out of 13767 elements--&gt;
+    &lt;synset id=&quot;v00001740&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;29&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;breathe&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;take a breath&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;respire&lt;/word&gt;
+         &lt;word lex_id=&quot;3&quot;&gt;suspire&lt;/word&gt;
+         &lt;pointer refs=&quot;v00005041 v00004227&quot;&gt;Entailment&lt;/pointer&gt;
+         &lt;pointer refs=&quot;a03110322 n04080833&quot; source=&quot;3&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00831191&quot; source=&quot;3&quot; target=&quot;3&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n04250850&quot; source=&quot;1&quot; target=&quot;5&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00831191&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v00004227 v00005041&quot; source=&quot;1&quot; target=&quot;3&quot;&gt;Also see&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v00002325 v00002573&quot;&gt;Verb Group&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v00002573 v00002724 v00002942 v00003826 v00004032 v00004227 v00005041 v00006697 v00007328 v00017031&quot;&gt;Hyponym&lt;/pointer&gt;
+         &lt;frame f_num=&quot;2&quot;/&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;def&gt;draw air into, and expel out of, the lungs&lt;/def&gt;
+         &lt;example&gt;I can breathe better when the air is clean&lt;/example&gt;
+         &lt;example&gt;The patient is respiring&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v00286798&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;30&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;smut&lt;/word&gt;
+         &lt;pointer refs=&quot;v00286605&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n14793533&quot; source=&quot;1&quot; target=&quot;4&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;frame f_num=&quot;11&quot;/&gt;
+         &lt;def&gt;stain with a dirty substance, such as soot&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v00557404&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;30&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;9&quot;&gt;take&lt;/word&gt;
+         &lt;pointer refs=&quot;v00149583&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;frame f_num=&quot;7&quot;/&gt;
+         &lt;def&gt;be seized or affected in a specified way&lt;/def&gt;
+         &lt;example&gt;take sick&lt;/example&gt;
+         &lt;example&gt;be taken drunk&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v00855794&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;32&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;referee&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;peer review&lt;/word&gt;
+         &lt;pointer refs=&quot;v00855512&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n10526927&quot; source=&quot;1&quot; target=&quot;2&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;def&gt;evaluate professionally a colleague's work&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v01135783&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;33&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;open fire&lt;/word&gt;
+         &lt;word lex_id=&quot;1&quot;&gt;fire&lt;/word&gt;
+         &lt;pointer refs=&quot;v01134781&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00986938&quot; source=&quot;2&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00986938&quot; source=&quot;2&quot; target=&quot;2&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;frame f_num=&quot;2&quot;/&gt;
+         &lt;frame f_num=&quot;22&quot;/&gt;
+         &lt;def&gt;start firing a weapon&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v01389329&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;35&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;1&quot;&gt;compress&lt;/word&gt;
+         &lt;word lex_id=&quot;3&quot;&gt;compact&lt;/word&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;pack together&lt;/word&gt;
+         &lt;pointer refs=&quot;v01447257&quot;&gt;Entailment&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v01527271&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00358089&quot; source=&quot;2&quot; target=&quot;3&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v01389607&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Antonym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00616083&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00356790&quot; source=&quot;1&quot; target=&quot;2&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;pointer refs=&quot;v01574571&quot;&gt;Hyponym&lt;/pointer&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;frame f_num=&quot;11&quot;/&gt;
+         &lt;frame f_num=&quot;21&quot;/&gt;
+         &lt;def&gt;make more compact by or as if by pressing&lt;/def&gt;
+         &lt;example&gt;compress the data&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v01660976&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;36&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;dip&lt;/word&gt;
+         &lt;pointer refs=&quot;v01653013&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n03203089&quot; source=&quot;1&quot; target=&quot;1&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;def&gt;place (candle wicks) into hot, liquid wax&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v01938942&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;38&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;schuss&lt;/word&gt;
+         &lt;pointer refs=&quot;v01938426&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00523513&quot;&gt;Domain of synset - TOPIC&lt;/pointer&gt;
+         &lt;frame f_num=&quot;2&quot;/&gt;
+         &lt;def&gt;ski downhill&lt;/def&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v02208265&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;40&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;13&quot;&gt;get&lt;/word&gt;
+         &lt;pointer refs=&quot;v02207206&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n01090446&quot;&gt;Domain of synset - TOPIC&lt;/pointer&gt;
+         &lt;pointer refs=&quot;n00041899&quot; source=&quot;1&quot; target=&quot;2&quot;&gt;Derivationally related form&lt;/pointer&gt;
+         &lt;frame f_num=&quot;8&quot;/&gt;
+         &lt;def&gt;purchase&lt;/def&gt;
+         &lt;example&gt;What did you get at the toy store?&lt;/example&gt;
+      &lt;/synset&gt;
+      &lt;synset id=&quot;v02489363&quot; type=&quot;v&quot;&gt;
+         &lt;lex_filenum&gt;41&lt;/lex_filenum&gt;
+         &lt;word lex_id=&quot;0&quot;&gt;mismarry&lt;/word&gt;
+         &lt;pointer refs=&quot;v02488834&quot;&gt;Hypernym&lt;/pointer&gt;
+         &lt;frame f_num=&quot;2&quot;/&gt;
+         &lt;def&gt;marry an unsuitable partner&lt;/def&gt;
+      &lt;/synset&gt;
+   &lt;/synsets&gt;
+&lt;/data&gt;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

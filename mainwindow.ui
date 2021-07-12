@@ -528,7 +528,7 @@
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="browse_PushButton">
         <property name="styleSheet">
          <string notr="true">color: white;
 background-color: green;
@@ -543,7 +543,7 @@ font: 75 12pt &quot;Constantia&quot;;
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="fileLabel">
         <property name="styleSheet">
          <string notr="true">border-color: rgb(255, 255, 255);</string>
         </property>
@@ -567,10 +567,19 @@ font: 75 12pt &quot;Constantia&quot;;
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QPushButton" name="pushButton_2">
+         <widget class="QPushButton" name="check_PushButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="styleSheet">
-           <string notr="true">color: white;
+           <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -581,7 +590,7 @@ background-color: green;
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="pushButton_3">
+         <widget class="QPushButton" name="fix_PushButton">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -592,7 +601,7 @@ background-color: green;
 }
 :disabled{
 	color:white;
-	background-color:green;
+	background-color:rgb(65, 65, 65);
 }
 </string>
           </property>
@@ -604,10 +613,19 @@ background-color: green;
        </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QPushButton" name="openXML_PushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -618,10 +636,19 @@ background-color: green;
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="format_PushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -632,10 +659,19 @@ background-color: green;
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_19">
+       <widget class="QPushButton" name="minify_PushButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -653,7 +689,7 @@ background-color: green;
      <rect>
       <x>10</x>
       <y>210</y>
-      <width>781</width>
+      <width>771</width>
       <height>361</height>
      </rect>
     </property>
@@ -695,9 +731,18 @@ background-color: green;
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <item>
          <widget class="QPushButton" name="pushButton_15">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
           <property name="styleSheet">
-           <string notr="true">color: white;
+           <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -711,9 +756,18 @@ background-color: green;
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_17">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -725,9 +779,18 @@ background-color: green;
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_18">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -951,9 +1014,18 @@ background-color: green;
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
        <widget class="QPushButton" name="pushButton_22">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -965,9 +1037,18 @@ background-color: green;
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_23">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
         <property name="styleSheet">
-         <string notr="true">color: white;
+         <string notr="true">:enabled{
+color: white;
 background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 
 
 </string>
@@ -995,7 +1076,10 @@ background-color: green;
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="pushButton_16">
+    <widget class="QPushButton" name="process_PushButton">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>6</x>
@@ -1008,12 +1092,16 @@ background-color: green;
       <string/>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: white;
+      <string notr="true">:enabled{
+color: white;
 font: 75 14pt &quot;MS Shell Dlg 2&quot;;
 font: 22pt &quot;MS Shell Dlg 2&quot;;
 background-color: green;
-
-
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
 </string>
      </property>
      <property name="text">

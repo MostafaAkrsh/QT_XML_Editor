@@ -15,7 +15,18 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_openXML_PushButton_clicked();
+
+    void on_browse_PushButton_clicked();
+
+    void on_check_PushButton_clicked();
+
+    void on_fix_PushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QString currentFile = "";
+
 };
 #endif // MAINWINDOW_H
