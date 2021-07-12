@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>640</height>
+    <height>620</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -25,13 +25,13 @@
   <property name="minimumSize">
    <size>
     <width>800</width>
-    <height>640</height>
+    <height>620</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>800</width>
-    <height>640</height>
+    <height>620</height>
    </size>
   </property>
   <property name="palette">
@@ -670,7 +670,7 @@ background-color: green;
       <x>580</x>
       <y>10</y>
       <width>201</width>
-      <height>191</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -719,7 +719,7 @@ background-color: green;
 </string>
         </property>
         <property name="text">
-         <string>Open Json File</string>
+         <string>Open The Generated Json File</string>
         </property>
        </widget>
       </item>
@@ -746,7 +746,7 @@ background-color: green;
       <x>390</x>
       <y>10</y>
       <width>181</width>
-      <height>191</height>
+      <height>121</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -755,31 +755,134 @@ background-color: green;
     <property name="title">
      <string>XML Information</string>
     </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_16">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>20</y>
-      <width>151</width>
-      <height>181</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string/>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;
-font: 75 14pt &quot;MS Shell Dlg 2&quot;;
-font: 22pt &quot;MS Shell Dlg 2&quot;;
-background-color: green;
-
-
-</string>
-    </property>
-    <property name="text">
-     <string>Process</string>
-    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>13</y>
+       <width>161</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>date:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>214234</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="lineEdit_2">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>214234</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>no nodes</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="lineEdit_3">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>214234</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>prop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+        </property>
+        <property name="text">
+         <string>214234</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
    </widget>
    <widget class="QPushButton" name="pushButton_20">
     <property name="geometry">
@@ -820,6 +923,103 @@ background-color: green;
     <property name="text">
      <string>Close</string>
     </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>130</y>
+      <width>391</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="title">
+     <string>Compression Tools</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QPushButton" name="pushButton_22">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Compress The XML file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_23">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Compress the Json file</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>16</y>
+      <width>151</width>
+      <height>185</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="pushButton_16">
+     <property name="geometry">
+      <rect>
+       <x>6</x>
+       <y>5</y>
+       <width>141</width>
+       <height>175</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: white;
+font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+background-color: green;
+
+
+</string>
+     </property>
+     <property name="text">
+      <string>Process</string>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>
