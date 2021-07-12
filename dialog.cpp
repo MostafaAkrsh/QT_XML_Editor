@@ -9,6 +9,7 @@ Dialog::Dialog(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->plainTextEdit->setPlainText(text);
+
 }
 
 Dialog::~Dialog()

@@ -2,3 +2,4 @@
 
 
     QString text;
+    QString xml;

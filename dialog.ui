@@ -492,8 +492,14 @@
     <string notr="true">font: 75 12pt &quot;System&quot;;
 background-color: rgb(0, 33, 0);</string>
    </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
    <property name="horizontalScrollBarPolicy">
-    <enum>Qt::ScrollBarAsNeeded</enum>
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="lineWrapMode">
+    <enum>QPlainTextEdit::NoWrap</enum>
    </property>
    <property name="readOnly">
     <bool>true</bool>
@@ -501,6 +507,7 @@ background-color: rgb(0, 33, 0);</string>
    <property name="plainText">
     <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!-- A random selection of elements from data.xml
+ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
      Some IDREFS (refs attribute of element pointer) do not have a corresponding id in this sample--&gt;
 &lt;?xml-model href=&quot;data.rnc&quot; type=&quot;application/relax-ng-compact-syntax&quot;?&gt;
 &lt;data version=&quot;3.0&quot;&gt;
@@ -861,6 +868,9 @@ background-color: rgb(0, 33, 0);</string>
       &lt;/synset&gt;
    &lt;/synsets&gt;
 &lt;/data&gt;</string>
+   </property>
+   <property name="centerOnScroll">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>

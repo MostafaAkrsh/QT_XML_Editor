@@ -2,6 +2,8 @@
 #define GLOBAL_OBJECTS_H
 #include "QString"
 extern QString text;
+extern QString xml;
+
 class global_objects
 {
 public:

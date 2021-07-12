@@ -7,9 +7,12 @@
 class Node
 {
 public:
-    int data;
+    int id;
+    QString tag;
+    QString data;
+
     QVector<Node*> childern;
-    Node(int val);
+    Node(int id , QString tag , QString data);
     ~Node();
 
 };
@@ -21,8 +24,8 @@ private:
 public:
     Tree();
     ~Tree();
-    void insert (Node* leaf , int val, int parent);
-    void insert(int val , int parent);
+    void insert (Node* leaf , int id , QString tag , QString data, int parent);
+    void insert(int id , QString tag , QString data, int parent);
     void postOrder(Node* t);
     void postOrder();
 

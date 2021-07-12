@@ -11,12 +11,11 @@ int main(int argc, char *argv[])
     w.show();
     Tree tree;
 
-    tree.insert(2,0);
-    tree.insert(5,2);
-    tree.insert(3,2);
-    tree.insert(6,5);
-    tree.insert(11,6);
-    tree.insert(40,3);
+    tree.insert(1,"note","",0);
+    tree.insert(1,"to","Tove",1);
+    tree.insert(1,"from","Jani",1);
+    tree.insert(1,"heading","Remainder",1);
+    tree.insert(1,"body","Don't forget me this weekend!",1);
 
     tree.postOrder();
 
