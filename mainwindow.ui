@@ -28,6 +28,12 @@
     <height>640</height>
    </size>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>640</height>
+   </size>
+  </property>
   <property name="palette">
    <palette>
     <active>
@@ -501,8 +507,8 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>201</width>
-      <height>141</height>
+      <width>211</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -516,8 +522,8 @@
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>143</width>
-       <height>25</height>
+       <width>191</width>
+       <height>31</height>
       </rect>
      </property>
      <layout class="QHBoxLayout" name="horizontalLayout">
@@ -526,6 +532,7 @@
         <property name="styleSheet">
          <string notr="true">color: white;
 background-color: green;
+font: 75 12pt &quot;Constantia&quot;;
 
 
 </string>
@@ -551,9 +558,9 @@ background-color: green;
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>50</y>
-       <width>183</width>
-       <height>56</height>
+       <y>60</y>
+       <width>191</width>
+       <height>114</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -597,6 +604,20 @@ background-color: green;
        </layout>
       </item>
       <item>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Open XML file</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="pushButton_4">
         <property name="styleSheet">
          <string notr="true">color: white;
@@ -610,8 +631,195 @@ background-color: green;
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_19">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Minify the XML</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
+   </widget>
+   <widget class="QTreeView" name="treeView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>210</y>
+      <width>781</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="dragEnabled">
+     <bool>true</bool>
+    </property>
+    <property name="sortingEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>201</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color:white;
+
+</string>
+    </property>
+    <property name="title">
+     <string>JSON File</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>183</width>
+       <height>85</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QPushButton" name="pushButton_15">
+          <property name="styleSheet">
+           <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+          </property>
+          <property name="text">
+           <string>Generate Json File</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Open Json File</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_18">
+        <property name="styleSheet">
+         <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Save To Disk</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>181</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="title">
+     <string>XML Information</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_16">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>20</y>
+      <width>151</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+font: 75 14pt &quot;MS Shell Dlg 2&quot;;
+font: 22pt &quot;MS Shell Dlg 2&quot;;
+background-color: green;
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Process</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_20">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>580</y>
+      <width>181</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Save to Disk</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_21">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>580</y>
+      <width>181</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;
+background-color: green;
+
+
+</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
    </widget>
   </widget>
  </widget>
