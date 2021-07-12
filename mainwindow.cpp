@@ -6,6 +6,12 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
+#include "mainwindow.h"
+#include "QDebug"
+#include <QApplication>
+#include "tree.h"
+#include "global_objects.h"
+
 bool tito = false;
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -55,6 +61,7 @@ void MainWindow::on_browse_PushButton_clicked()
 
           // Interface for reading text
           QTextStream in(&file);
+           text = in.readAll();
 }
 
 
@@ -83,5 +90,6 @@ void MainWindow::on_fix_PushButton_clicked()
     ui->process_PushButton->setEnabled(1);
     ui->format_PushButton->setEnabled(1);
     ui->minify_PushButton->setEnabled(1);
+
 }
 

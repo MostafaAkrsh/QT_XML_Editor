@@ -10,12 +10,14 @@ CONFIG += c++11
 
 SOURCES += \
     dialog.cpp \
+    global_objects.cpp \
     main.cpp \
     mainwindow.cpp \
     tree.cpp
 
 HEADERS += \
     dialog.h \
+    global_objects.h \
     mainwindow.h \
     tree.h
 
