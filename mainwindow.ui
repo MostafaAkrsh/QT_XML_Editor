@@ -508,7 +508,7 @@
       <x>10</x>
       <y>10</y>
       <width>211</width>
-      <height>191</height>
+      <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -558,7 +558,7 @@ font: 75 12pt &quot;Constantia&quot;;
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>44</y>
+       <y>50</y>
        <width>191</width>
        <height>143</height>
       </rect>
@@ -707,22 +707,6 @@ background-color: green;
      </layout>
     </widget>
    </widget>
-   <widget class="QTreeView" name="treeView">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>210</y>
-      <width>771</width>
-      <height>361</height>
-     </rect>
-    </property>
-    <property name="dragEnabled">
-     <bool>true</bool>
-    </property>
-    <property name="sortingEnabled">
-     <bool>true</bool>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
@@ -753,7 +737,7 @@ background-color: green;
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <item>
-         <widget class="QPushButton" name="pushButton_15">
+         <widget class="QPushButton" name="JSON_PushButton">
           <property name="enabled">
            <bool>false</bool>
           </property>
@@ -778,7 +762,7 @@ background-color: green;
        </layout>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_17">
+       <widget class="QPushButton" name="openJSON_PushButton">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -801,7 +785,7 @@ background-color: green;
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_18">
+       <widget class="QPushButton" name="saveJSON_PushButton">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -829,10 +813,10 @@ background-color: green;
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>230</x>
       <y>10</y>
       <width>181</width>
-      <height>121</height>
+      <height>201</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -841,6 +825,252 @@ background-color: green;
     <property name="title">
      <string>XML Information</string>
     </property>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>150</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>num of nodes:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="depthinfo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>175</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>175</y>
+       <width>65</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>xml depth:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="nodesinfo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>150</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dateinfo_3">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>84</x>
+       <y>120</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="labell">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>date read:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="sizeinfo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>42</y>
+       <width>121</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>42</y>
+       <width>22</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>size:</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>67</y>
+       <width>66</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>date created:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ownerinfo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>84</x>
+       <y>92</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="dateinfo">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>84</x>
+       <y>67</y>
+       <width>87</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+background-color: rgb(0, 29, 0);
+border:0px;
+text-align: center;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>12</x>
+       <y>92</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>date modified:</string>
+     </property>
+    </widget>
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
@@ -873,130 +1103,7 @@ border:0px;
 text-align: center;</string>
      </property>
      <property name="text">
-      <string>214234</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>42</y>
-       <width>22</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>size:</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="sizeinfo">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>42</y>
-       <width>121</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:white;
-background-color: rgb(0, 29, 0);
-border:0px;
-text-align: center;</string>
-     </property>
-     <property name="text">
-      <string>214234</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>67</y>
-       <width>66</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>date created:</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="dateinfo">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>84</x>
-       <y>67</y>
-       <width>87</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:white;
-background-color: rgb(0, 29, 0);
-border:0px;
-text-align: center;</string>
-     </property>
-     <property name="text">
-      <string>214234</string>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>12</x>
-       <y>92</y>
-       <width>65</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>date modified</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="ownerinfo">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>84</x>
-       <y>92</y>
-       <width>87</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color:white;
-background-color: rgb(0, 29, 0);
-border:0px;
-text-align: center;</string>
-     </property>
-     <property name="text">
-      <string>214234</string>
+      <string/>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -1049,10 +1156,10 @@ background-color: green;
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>580</x>
       <y>130</y>
-      <width>391</width>
-      <height>71</height>
+      <width>201</width>
+      <height>81</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1061,18 +1168,18 @@ background-color: green;
     <property name="title">
      <string>Compression Tools</string>
     </property>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QWidget" name="">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>20</y>
-       <width>371</width>
-       <height>41</height>
+       <width>181</width>
+       <height>54</height>
       </rect>
      </property>
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
-      <item>
-       <widget class="QPushButton" name="pushButton_22">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QPushButton" name="pushButton_26">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -1090,11 +1197,11 @@ background-color: green;
 </string>
         </property>
         <property name="text">
-         <string>Compress The XML file</string>
+         <string>Compress Json </string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="0" column="1">
        <widget class="QPushButton" name="pushButton_23">
         <property name="enabled">
          <bool>false</bool>
@@ -1113,7 +1220,53 @@ background-color: green;
 </string>
         </property>
         <property name="text">
-         <string>Compress the Json file</string>
+         <string>decompress Json</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QPushButton" name="pushButton_27">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">:enabled{
+color: white;
+background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>Compress XML </string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QPushButton" name="pushButton_22">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">:enabled{
+color: white;
+background-color: green;
+}
+:disabled{
+	color:white;
+	background-color:rgb(65, 65, 65);
+}
+
+
+</string>
+        </property>
+        <property name="text">
+         <string>decompress XML</string>
         </property>
        </widget>
       </item>
@@ -1123,10 +1276,10 @@ background-color: green;
    <widget class="QGroupBox" name="groupBox_5">
     <property name="geometry">
      <rect>
-      <x>230</x>
+      <x>420</x>
       <y>16</y>
       <width>151</width>
-      <height>185</height>
+      <height>195</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -1144,7 +1297,7 @@ background-color: green;
        <x>6</x>
        <y>5</y>
        <width>141</width>
-       <height>175</height>
+       <height>184</height>
       </rect>
      </property>
      <property name="toolTip">
@@ -1167,6 +1320,113 @@ background-color: green;
       <string>Process</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>771</width>
+      <height>351</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QHeaderView::section {         
+    color: black;                               
+    padding: 2px;                               
+    height:20px;                                
+    border: 0px solid ;                  
+	color: rgb(255, 255, 255);
+    border-left:0px;                            
+    border-right:0px;                           
+
+                    
+	background-color: rgb(0, 85, 0);
+}
+*{
+	background-color: rgb(0, 0, 0);
+	color:rgb(52, 135, 0)
+}
+    
+QTreeView::branch:has-siblings:!adjoins-item {
+        border-image: url(:/vline.png) 0;
+    }
+     
+    QTreeView::branch:has-siblings:adjoins-item {
+        border-image: url(:/branch-more.png) 0;
+    }
+     
+    QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+        border-image: url(:/branch-end.png) 0;
+    }
+     
+    QTreeView::branch:has-children:!has-siblings:closed,
+    QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(:/branch-closed.png);
+    }
+     
+    QTreeView::branch:open:has-children:!has-siblings,
+    QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(:/branch-open.png);
+}
+
+ 
+QTreeView::item {
+    border: 1px solid rgb(34, 97, 0);
+}
+ 
+QTreeView::item:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(0, 85, 0), stop: 1 rgb(0, 0, 0));
+}
+ 
+QTreeView::item:selected {
+    border: 1px solid rgb(0, 227, 0)
+}
+ 
+</string>
+    </property>
+    <column>
+     <property name="text">
+      <string/>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>dsdsa</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>sda</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>sdasd</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>adsdsa</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>sadds</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>dsads</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>dsdas</string>
+      </property>
+     </item>
+    </item>
    </widget>
   </widget>
  </widget>

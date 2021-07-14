@@ -21,6 +21,8 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    AddRoot("hello", "world");
 }
 
 MainWindow::~MainWindow()
@@ -28,6 +30,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::AddRoot(QString name, QString Description)
+{
+    QTreeWidgetItem* itm = new QTreeWidgetItem(ui->treeWidget);
+}
+
+void MainWindow::AddChild(QTreeWidgetItem* parent, QString name , QString Description )
+{
+
+}
 
 void MainWindow::on_openXML_PushButton_clicked()
 {
@@ -37,9 +48,16 @@ void MainWindow::on_openXML_PushButton_clicked()
 }
 
            int flagConsistent = 0;
+           int maxid = 0;
+          int maxlevel = 0;
 void MainWindow::on_browse_PushButton_clicked()
 {
     t.~Tree();
+
+
+    ui->nodesinfo->setText("???");
+
+    ui->depthinfo->setText("???");
 
     QString fileName = QFileDialog::getOpenFileName(this, "Open the file");
 
@@ -52,6 +70,8 @@ void MainWindow::on_browse_PushButton_clicked()
           ui->sizeinfo->setText(sI+" Bytes");
           ui->ownerinfo->setText(f.lastModified().toString("yyyy.MM.dd"));
           ui->path_info->setText(f.path());
+          ui->dateinfo_3->setText(f.lastRead().toString("yyyy.MM.dd"));
+
 
           // Store the currentFile name
           currentFile = fileName;
@@ -168,10 +188,14 @@ void MainWindow::on_browse_PushButton_clicked()
                            if (data == NULL)
                            {
                                level++;
+                              if(level > maxlevel)
+                                maxlevel = level;
                                parent.push(id);
                                mm[id] = getstring;
                            }
                            id++;
+                          if(id > maxid)
+                                maxid = id;
                            att.clear();
                            attval.clear();
                            break;
@@ -217,9 +241,16 @@ void MainWindow::on_browse_PushButton_clicked()
                  }
                }
 
-           t.postOrderJson();
            if(s.isEmpty()) flagConsistent = 1;
            else flagConsistent = 0;
+
+           QString nI = QString::number(maxid - 1);
+
+           ui->nodesinfo->setText(nI);
+
+           QString dI = QString::number(maxlevel);
+
+           ui->depthinfo->setText(dI);
            }
 
 //     t.insert(1,"s.pop()","",att,attval,1,0);
@@ -236,6 +267,8 @@ void MainWindow::on_check_PushButton_clicked()
         ui->process_PushButton->setEnabled(1);
         ui->format_PushButton->setEnabled(1);
         ui->minify_PushButton->setEnabled(1);
+        ui->JSON_PushButton->setEnabled(1);
+
 
     }
     if(flagConsistent == false)
@@ -259,6 +292,7 @@ void MainWindow::on_fix_PushButton_clicked()
 
 void MainWindow::on_format_PushButton_clicked()
 {
+    t.postOrder();
     text = xml;
     QMessageBox::information(this,"File has been formatted","XML is formatted successfully. Click [Open XML file] To show the effect");
 }
@@ -287,7 +321,7 @@ void MainWindow::on_saveXML_PushButton_clicked()
            QTextStream out(&file);
 
            // Output to file
-           out << text;
+           out << xml;
 }
 
 
@@ -297,5 +331,50 @@ void MainWindow::on_minify_PushButton_clicked()
     text = xml;
     QMessageBox::information(this,"File has been formatted","XML is formatted successfully. Click [Open XML file] To show the effect");
 
+}
+
+
+void MainWindow::on_JSON_PushButton_clicked()
+{
+    t.postOrderJson();
+    QMessageBox::information(this,"Json File has been generated","Json file is generated successfully. Click [Open json file]");
+    ui->openJSON_PushButton->setEnabled(1);
+    ui->saveJSON_PushButton->setEnabled(1);
+}
+
+
+void MainWindow::on_openJSON_PushButton_clicked()
+{
+    text = json;
+    Dialog modalDialog;
+    modalDialog.setModal(true);
+    modalDialog.exec();
+}
+
+
+void MainWindow::on_saveJSON_PushButton_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, "Save as");
+
+           // An object for reading and writing files
+           QFile file(fileName);
+
+           // Try to open a file with write only options
+           if (!file.open(QFile::WriteOnly | QFile::Text)) {
+               QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
+               return;
+           }
+
+           // Store the currentFile name
+           currentFile = fileName;
+
+           // Set the title for the window to the file name
+           setWindowTitle(fileName);
+
+           // Interface for writing text
+           QTextStream out(&file);
+
+           // Output to file
+           out << json;
 }
 

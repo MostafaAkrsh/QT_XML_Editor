@@ -6,6 +6,7 @@
 
 extern QString text;
 extern QString xml;
+extern QString json;
 extern QString fileName;
 extern Tree t;
 extern QStack<QString> s;

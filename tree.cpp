@@ -2,6 +2,9 @@
 #include "QDebug"
 #include <QTextStream>
 #include "global_objects.h"
+#include "QMap"
+#include "QQueue"
+
 Node::Node(int i , QString t , QString d , QVector<QString> at , QVector<QString> av , int l)
 {
         id = i;
@@ -93,7 +96,6 @@ void Tree::postOrder(Node* t)
         }
 
     }
-
 void Tree::postOrderMini(Node *t)
     {
 
@@ -139,51 +141,92 @@ void Tree::postOrderMini()
 
         postOrderMini(root);
     }
-
+bool figo = 0;
+bool first = 1;
+QMap<QString,int> m;
+QVector<int>final;
 void Tree::postOrderJson(Node* t)
     {
-    xml += "{ \n";
 
         if ( t  != NULL )
         {
+
             for(int i = 0 ; i < t->level ; i++)
-            xml +="\t";
+            json +="\t";
 
-            xml +="\""+t->tag+"\": ";
-            xml +="[";
-
-            for (int i = 0 ; i < t->attrTag.size(); i++){
-            if(t->attrVal[i] != NULL)
+            if(m[t->tag] == 0 || t->tag == "frame")
             {
-                xml +="\n";
-                xml += "\"" + t->attrTag[i]+"=\""+t->attrVal[i]+"\"";
-            }
+                json +="\""+t->tag+"\": ";
+                if( t->data == NULL )
+
+                    if(t->tag !="frame")
+                final.push_back(t->childern.size());
             }
 
-            xml += "\n";
-            if(t->data != NULL)
+            if(m[t->tag] != 0) {
+
+                if(t->tag == "frame") ;
+                else json +=",";
+
+                first = 0;
+
+            }
+
+            m[t->tag]++;
+
+            if (t->data != NULL)
             {
-                for(int i = 0 ; i < t->level ; i++)
-                xml +="\t       ";
+            json +="\""+t->data+"\"";
+            m[t->tag]--;
             }
 
-            xml +="\""+t->data+"\"";
-
+            if(t->data == NULL)
+            {
+            if(m[t->tag] != 0 && first == 1 && t->id != 1) xml += "[{ \n";
+            else json += "{ \n";
+            }
             for ( int i = 0 ; i < t->childern.size() ; i++)
             {
+                if( i == t->childern.size() - 1)
+                {
+                    figo = 1;
+                }
                 postOrderJson(t->childern[i]);
             }
-            xml += ",";
+
+            if(t->data != NULL && figo != 1)
+            json += ",";
+
+            figo = 0;
+
+        //
         }
+        if(json.right(1) != "\n")
+        json += "\n";
+
+        if(t->data == NULL){
         for(int i = 0 ; i < t->level ; i++)
-        xml +="\t";
-        xml += "}";
+        json +="\t";
+        if(final.size() > 2){
+
+        if(m[t->tag] == final[final.size() - 2] )
+        {
+            json+= "    }]\n";
+            final.pop_back();
+        }
+        }
+        else json += "    }\n";
+
+    first = 1;
+
+        }
     }
 
 void Tree::postOrderJson()
     {
-    xml = "";
-
+    json = "";
+    json += "{ \n";
         postOrderJson(root);
+    json += "}";
     }
 

@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "QtCore"
+#include "QtGui"
+#include "QTreeWidgetItem"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -29,6 +32,15 @@ private slots:
     void on_saveXML_PushButton_clicked();
 
     void on_minify_PushButton_clicked();
+
+    void on_JSON_PushButton_clicked();
+
+    void on_openJSON_PushButton_clicked();
+
+    void on_saveJSON_PushButton_clicked();
+
+    void AddRoot(QString name, QString Description);
+    void AddChild(QTreeWidgetItem* parent, QString name , QString Description );
 
 private:
     Ui::MainWindow *ui;
