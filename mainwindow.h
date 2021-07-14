@@ -24,6 +24,12 @@ private slots:
 
     void on_fix_PushButton_clicked();
 
+    void on_format_PushButton_clicked();
+
+    void on_saveXML_PushButton_clicked();
+
+    void on_minify_PushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString currentFile = "";

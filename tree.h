@@ -10,9 +10,13 @@ public:
     int id;
     QString tag;
     QString data;
-
+    int level;
     QVector<Node*> childern;
-    Node(int id , QString tag , QString data);
+
+    QVector<QString> attrTag;
+    QVector<QString> attrVal;
+
+    Node(int id , QString tag , QString data, QVector<QString> attrTag , QVector<QString> attrVal , int level);
     ~Node();
 
 };
@@ -24,10 +28,16 @@ private:
 public:
     Tree();
     ~Tree();
-    void insert (Node* leaf , int id , QString tag , QString data, int parent);
-    void insert(int id , QString tag , QString data, int parent);
+    void insert (Node* leaf , int id , QString tag , QString data, QVector<QString> attrTag , QVector<QString> attrVal, int parent, int order);
+    void insert(int id , QString tag , QString data, QVector<QString> attrTag , QVector<QString> attrVal , int parent, int order);
     void postOrder(Node* t);
+    void postOrderMini(Node *t);
     void postOrder();
+    void postOrderMini();
+
+    void postOrderJson(Node *t);
+    void postOrderJson();
+
 
 };
 
