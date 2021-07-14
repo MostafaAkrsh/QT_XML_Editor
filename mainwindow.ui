@@ -1168,7 +1168,7 @@ background-color: green;
     <property name="title">
      <string>Compression Tools</string>
     </property>
-    <widget class="QWidget" name="">
+    <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -1378,7 +1378,7 @@ QTreeView::item {
 }
  
 QTreeView::item:hover {
-    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 rgb(0, 85, 0), stop: 1 rgb(0, 0, 0));
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2:1, stop: 0 rgb(0, 85, 0), stop: 1 rgb(0, 0, 0));
 }
  
 QTreeView::item:selected {
