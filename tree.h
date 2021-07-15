@@ -31,13 +31,13 @@ public:
     ~Tree();
     void insert (Node* leaf , int id , QString tag , QString data, QVector<QString> attrTag , QVector<QString> attrVal, int parent, int order);
     void insert(int id , QString tag , QString data, QVector<QString> attrTag , QVector<QString> attrVal , int parent, int order);
-    void postOrder(Node* t);
-    void postOrderMini(Node *t);
-    void postOrder();
-    void postOrderMini();
+    void preOrder(Node* t);
+    void preOrderMini(Node *t);
+    void preOrder();
+    void preOrderMini();
 
-    void postOrderJson(Node *t);
-    void postOrderJson();
+    void preOrderJson(Node *t);
+    void preOrderJson();
 
     void Traverse(Node *t);
     void Traverse();

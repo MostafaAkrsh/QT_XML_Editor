@@ -63,7 +63,7 @@ void Tree::insert(int id , QString tag , QString data, QVector<QString> attrTag 
 }
 
 
-void Tree::postOrder(Node* t)
+void Tree::preOrder(Node* t)
     {
         if ( t  != NULL )
         {
@@ -90,7 +90,7 @@ void Tree::postOrder(Node* t)
                 xml += "\n";
             for ( int i = 0 ; i < t->childern.size() ; i++)
             {
-                postOrder(t->childern[i]);
+                preOrder(t->childern[i]);
             }
             for(int i = 0 ; i < t->level ; i++)
             xml +="\t";
@@ -98,7 +98,7 @@ void Tree::postOrder(Node* t)
         }
 
     }
-void Tree::postOrderMini(Node *t)
+void Tree::preOrderMini(Node *t)
     {
 
     if ( t  != NULL )
@@ -121,7 +121,7 @@ void Tree::postOrderMini(Node *t)
 
         for ( int i = 0 ; i < t->childern.size() ; i++)
         {
-            postOrderMini(t->childern[i]);
+            preOrderMini(t->childern[i]);
         }
 
         xml += "</"+t->tag+'>';
@@ -129,25 +129,25 @@ void Tree::postOrderMini(Node *t)
 
     }
 
-void Tree::postOrder()
+void Tree::preOrder()
     {
     xml = "";
 
-        postOrder(root);
+        preOrder(root);
     }
 
 
-void Tree::postOrderMini()
+void Tree::preOrderMini()
     {
     xml = "";
 
-        postOrderMini(root);
+        preOrderMini(root);
     }
 bool figo = 0;
 bool first = 1;
 QMap<QString,int> m;
 QVector<int>final;
-void Tree::postOrderJson(Node* t)
+void Tree::preOrderJson(Node* t)
     {
 
         if ( t  != NULL )
@@ -193,7 +193,7 @@ void Tree::postOrderJson(Node* t)
                 {
                     figo = 1;
                 }
-                postOrderJson(t->childern[i]);
+                preOrderJson(t->childern[i]);
             }
 
             if(t->data != NULL && figo != 1)
@@ -224,11 +224,11 @@ void Tree::postOrderJson(Node* t)
         }
     }
 
-void Tree::postOrderJson()
+void Tree::preOrderJson()
     {
     json = "";
     json += "{ \n";
-        postOrderJson(root);
+        preOrderJson(root);
     json += "}";
     }
 
@@ -239,7 +239,7 @@ void Tree::Traverse(Node *t)
 
             for ( int i = 0 ; i < t->childern.size() ; i++)
             {
-                postOrder(t->childern[i]);
+                preOrder(t->childern[i]);
             }
 
         }

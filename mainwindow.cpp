@@ -84,6 +84,7 @@ void MainWindow::AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString
 
 void MainWindow::on_openXML_PushButton_clicked()
 {
+    text = xml;
     Dialog modalDialog;
     modalDialog.setModal(true);
     modalDialog.exec();
@@ -116,7 +117,6 @@ void MainWindow::on_browse_PushButton_clicked()
 
     QString fileName = QFileDialog::getOpenFileName(this, "Open the file");
 
-          // An object for reading and writing files
           QFile file(fileName);
           QFileInfo f(fileName);
 
@@ -128,12 +128,10 @@ void MainWindow::on_browse_PushButton_clicked()
           ui->dateinfo_3->setText(f.lastRead().toString("yyyy.MM.dd"));
 
 
-          // Store the currentFile name
           currentFile = fileName;
           QString checkxml = fileName.right(3);
 
-          // Try to open the file as a read only file if possible or display a
-          // warning dialog box
+
           if (!file.open(QIODevice::ReadOnly | QFile::Text )|| !(checkxml == "xml" || checkxml =="XML")) {
               QMessageBox::warning(this, "Warning", "Cannot open file: please enter valid xml file");
               return;
@@ -141,7 +139,6 @@ void MainWindow::on_browse_PushButton_clicked()
 
           QString e = fileName.right(20);
 
-          // Set the title for the window to the file name
            ui->fileLabel->setText(e);
            ui->openXML_PushButton->setEnabled(1);
            ui->check_PushButton->setEnabled(1);
@@ -149,7 +146,6 @@ void MainWindow::on_browse_PushButton_clicked()
            ui->CompressXML->setEnabled(1);
            ui->DecompressXML->setEnabled(1);
 
-          // Interface for reading text
            QTextStream in(&file);
            text = in.readAll();
            QString input = text;
@@ -346,7 +342,7 @@ void MainWindow::on_fix_PushButton_clicked()
 
 void MainWindow::on_format_PushButton_clicked()
 {
-    t.postOrder();
+    t.preOrder();
     text = xml;
     QMessageBox::information(this,"File has been formatted","XML is formatted successfully. Click [Open XML file] To show the effect");
 }
@@ -381,16 +377,16 @@ void MainWindow::on_saveXML_PushButton_clicked()
 
 void MainWindow::on_minify_PushButton_clicked()
 {
-    t.postOrderMini();
+    t.preOrderMini();
     text = xml;
-    QMessageBox::information(this,"File has been formatted","XML is formatted successfully. Click [Open XML file] To show the effect");
+    QMessageBox::information(this,"File has been minified","XML is minified successfully. Click [Open XML file] To show the effect");
 
 }
 
 
 void MainWindow::on_JSON_PushButton_clicked()
 {
-    t.postOrderJson();
+    t.preOrderJson();
     QMessageBox::information(this,"Json File has been generated","Json file is generated successfully. Click [Open json file]");
     ui->openJSON_PushButton->setEnabled(1);
     ui->saveJSON_PushButton->setEnabled(1);
