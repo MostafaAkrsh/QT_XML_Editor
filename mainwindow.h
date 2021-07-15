@@ -39,6 +39,14 @@ private slots:
 
     void on_saveJSON_PushButton_clicked();
 
+    void on_Visualize_PushButton_clicked();
+
+    void on_CompressXML_clicked();
+
+    void on_DecompressXML_clicked();
+
+    void on_pushButton_20_clicked();
+
 public:
     void AddRoot(QString name, QString Description);
     void AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString> attrTag, QVector<QString> attrVal, QString data );

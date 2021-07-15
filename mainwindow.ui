@@ -486,20 +486,14 @@
    <string>XML Editor By Mostafa Akrsh</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>E:/Study Comp III/_Second Term/Data Structure/Project/icon.png</normaloff>E:/Study Comp III/_Second Term/Data Structure/Project/icon.png</iconset>
+   <iconset resource="q.qrc">
+    <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
   <property name="toolTip">
    <string notr="true"/>
   </property>
   <property name="styleSheet">
    <string notr="true"/>
-  </property>
-  <property name="iconSize">
-   <size>
-    <width>24</width>
-    <height>24</height>
-   </size>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QGroupBox" name="groupBox">
@@ -1113,46 +1107,6 @@ text-align: center;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton_20">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>580</y>
-      <width>181</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;
-background-color: green;
-
-
-</string>
-    </property>
-    <property name="text">
-     <string>Save to Disk</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_21">
-    <property name="geometry">
-     <rect>
-      <x>610</x>
-      <y>580</y>
-      <width>181</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;
-background-color: green;
-
-
-</string>
-    </property>
-    <property name="text">
-     <string>Close</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_4">
     <property name="geometry">
      <rect>
@@ -1171,15 +1125,15 @@ background-color: green;
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>8</x>
        <y>20</y>
-       <width>181</width>
+       <width>185</width>
        <height>54</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
-       <widget class="QPushButton" name="pushButton_26">
+       <widget class="QPushButton" name="CompressXML">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -1197,35 +1151,12 @@ background-color: green;
 </string>
         </property>
         <property name="text">
-         <string>Compress Json </string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="pushButton_23">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">:enabled{
-color: white;
-background-color: green;
-}
-:disabled{
-	color:white;
-	background-color:rgb(65, 65, 65);
-}
-
-
-</string>
-        </property>
-        <property name="text">
-         <string>decompress Json</string>
+         <string>Compress</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QPushButton" name="pushButton_27">
+       <widget class="QPushButton" name="DecompressXML">
         <property name="enabled">
          <bool>false</bool>
         </property>
@@ -1243,30 +1174,7 @@ background-color: green;
 </string>
         </property>
         <property name="text">
-         <string>Compress XML </string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton_22">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">:enabled{
-color: white;
-background-color: green;
-}
-:disabled{
-	color:white;
-	background-color:rgb(65, 65, 65);
-}
-
-
-</string>
-        </property>
-        <property name="text">
-         <string>decompress XML</string>
+         <string>Decompress</string>
         </property>
        </widget>
       </item>
@@ -1288,7 +1196,7 @@ background-color: green;
     <property name="title">
      <string/>
     </property>
-    <widget class="QPushButton" name="process_PushButton">
+    <widget class="QPushButton" name="Visualize_PushButton">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -1317,7 +1225,7 @@ background-color: green;
 </string>
      </property>
      <property name="text">
-      <string>Process</string>
+      <string>Visualize</string>
      </property>
     </widget>
    </widget>
@@ -1327,7 +1235,7 @@ background-color: green;
       <x>10</x>
       <y>220</y>
       <width>771</width>
-      <height>351</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -1341,7 +1249,6 @@ background-color: green;
     </property>
     <property name="styleSheet">
      <string notr="true">QHeaderView::section {         
-    color: black;                               
     padding: 2px;                               
     height:20px;                                
     border: 0px solid ;                  
@@ -1352,9 +1259,13 @@ background-color: green;
                     
 	background-color: rgb(0, 85, 0);
 }
+QTreeView{
+border: .5px solid white;
+}
 *{
 	background-color: rgb(0, 0, 0);
-	color:rgb(52, 135, 0)
+	color:rgb(52, 135, 0);
+
 }
     
 QTreeView::branch:has-siblings:!adjoins-item {
@@ -1391,6 +1302,7 @@ QTreeView::item:hover {
 }
  
 QTreeView::item:selected {
+	color:white;
     border: 1px solid rgb(0, 227, 0)
 }
  
@@ -1415,7 +1327,7 @@ QTreeView::item:selected {
      <bool>false</bool>
     </property>
     <property name="selectionMode">
-     <enum>QAbstractItemView::MultiSelection</enum>
+     <enum>QAbstractItemView::ExtendedSelection</enum>
     </property>
     <property name="headerHidden">
      <bool>false</bool>
@@ -1467,8 +1379,50 @@ QTreeView::item:selected {
      </property>
     </column>
    </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>771</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);
+
+border: .5px solid white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="q.qrc">
+      <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <zorder>pushButton</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_5</zorder>
+   <zorder>treeWidget</zorder>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="q.qrc"/>
+  <include location="q.qrc"/>
+  <include location="q.qrc"/>
+ </resources>
  <connections/>
 </ui>

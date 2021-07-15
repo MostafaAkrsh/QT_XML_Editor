@@ -1,9 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>vline.png</file>
-        <file>branch-more.png</file>
-        <file>branch-end.png</file>
-        <file>branch-open.png</file>
-        <file>branch-closed.png</file>
+        <file>E:/Study Comp III/_Second Term/Data Structure/Project/icon.png</file>
     </qresource>
 </RCC>

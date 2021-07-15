@@ -14,6 +14,8 @@
 #include "QStack"
 #include "QMap"
 #include "QDateTime"
+#include "smaz.h"
+#include "compression.h"
 QVector<QString> attrT;
 QVector<QTreeWidgetItem*> sons;
 
@@ -26,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->treeWidget->setColumnCount(4);
     ui->treeWidget->header()->resizeSection(0,200);
     ui->treeWidget->header()->resizeSection(3,1000);
+    ui->treeWidget->hide();
 
 }
 
@@ -34,18 +37,14 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::AddRoot(QString name, QString Description)
-{
-    QTreeWidgetItem* itm = new QTreeWidgetItem(ui->treeWidget);
-   // itm->setText(0,name);
-  //  itm->setText(1,Description);
-  //  ui->treeWidget->addTopLevelItem(itm);
-}
-
 void MainWindow::AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString> attrTag, QVector<QString> attrVal, QString data )
 {
     QTreeWidgetItem* itm = new QTreeWidgetItem(parent);
-    QString at= "[";
+
+    QString at;
+
+    if(attrTag.size() != 0)
+      at += "[";
 
     for ( int i = 0 ; i < attrTag.size() ; i++ )
     {
@@ -54,10 +53,11 @@ void MainWindow::AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString
         if(i != attrTag.size() - 1) at+=" , ";
     }
 
+    if(attrTag.size() != 0)
     at +="]";
 
     QString av= "";
-
+    if(attrVal.size() != 0)
     av +="[";
 
     for ( int i = 0 ; i < attrVal.size() ; i++ )
@@ -68,6 +68,7 @@ void MainWindow::AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString
 
     }
 
+    if(attrVal.size() != 0)
     av +="]";
 
 
@@ -93,10 +94,21 @@ void MainWindow::on_openXML_PushButton_clicked()
           int maxlevel = 0;
 void MainWindow::on_browse_PushButton_clicked()
 {
+    ui->treeWidget->hide();
+
     t.~Tree();
     ui->treeWidget->clear();
     sons.clear();
     AddChild(NULL,"root",attrT,attrT,"");
+
+    ui->openJSON_PushButton->setEnabled(0);
+    ui->saveJSON_PushButton->setEnabled(0);
+    ui->Visualize_PushButton->setEnabled(0);
+    ui->format_PushButton->setEnabled(0);
+    ui->minify_PushButton->setEnabled(0);
+    ui->JSON_PushButton->setEnabled(0);
+
+
 
     ui->nodesinfo->setText("???");
 
@@ -134,6 +146,8 @@ void MainWindow::on_browse_PushButton_clicked()
            ui->openXML_PushButton->setEnabled(1);
            ui->check_PushButton->setEnabled(1);
            ui->saveXML_PushButton->setEnabled(1);
+           ui->CompressXML->setEnabled(1);
+           ui->DecompressXML->setEnabled(1);
 
           // Interface for reading text
            QTextStream in(&file);
@@ -307,7 +321,7 @@ void MainWindow::on_check_PushButton_clicked()
     if(flagConsistent == true)
     {
         QMessageBox::information(this,"XML is consistent","GREAT! XML is already consistent");
-        ui->process_PushButton->setEnabled(1);
+        ui->Visualize_PushButton->setEnabled(1);
         ui->format_PushButton->setEnabled(1);
         ui->minify_PushButton->setEnabled(1);
         ui->JSON_PushButton->setEnabled(1);
@@ -325,10 +339,7 @@ void MainWindow::on_check_PushButton_clicked()
 
 void MainWindow::on_fix_PushButton_clicked()
 {
-    QMessageBox::information(this,"XML has been fixed","XML has been fixed successfully!");
-    ui->process_PushButton->setEnabled(1);
-    ui->format_PushButton->setEnabled(1);
-    ui->minify_PushButton->setEnabled(1);
+    QMessageBox::information(this,"Sorry","Sadly,This feature hasn't been implemented yet :`(");
 
 }
 
@@ -419,5 +430,114 @@ void MainWindow::on_saveJSON_PushButton_clicked()
 
            // Output to file
            out << json;
+}
+
+
+void MainWindow::on_Visualize_PushButton_clicked()
+{
+    ui->treeWidget->show();
+
+}
+
+
+void MainWindow::on_CompressXML_clicked()
+{
+   QString outy;
+   Compression c;
+  text = text.toLower();
+   outy = c.Compress(text);
+
+    QString fileName = QFileDialog::getSaveFileName(this, "Save as");
+
+           // An object for reading and writing files
+           QFile file(fileName);
+
+           // Try to open a file with write only options
+           if (!file.open(QFile::WriteOnly | QFile::Text)) {
+               QMessageBox::warning(this, "Warning", "Cannot save file: " + file.errorString());
+               return;
+           }
+
+           // Store the currentFile name
+           currentFile = fileName;
+
+           // Set the title for the window to the file name
+           setWindowTitle(fileName);
+
+           // Interface for writing text
+           QTextStream out(&file);
+           out.setCodec("UTF-8");
+
+           out << outy;
+}
+
+
+void MainWindow::on_DecompressXML_clicked()
+{
+    QString fileName = QFileDialog::getOpenFileName(this, "Open the file");
+
+           // An object for reading and writing files
+           QFile file(fileName);
+
+           // Store the currentFile name
+           currentFile = fileName;
+
+           // Try to open the file as a read only file if possible or display a
+           // warning dialog box
+           if (!file.open(QIODevice::ReadOnly | QFile::Text)) {
+               QMessageBox::warning(this, "Warning", "Cannot open file: " + file.errorString());
+               return;
+           }
+
+           // Set the title for the window to the file name
+           setWindowTitle(fileName);
+           // Interface for reading text
+           QTextStream in(&file);
+           in.setCodec("UTF-8");
+
+           // Copy text in the string
+           QString texty = in.readAll();
+
+           Compression c;
+
+           texty = c.Decompress(texty);
+           QString texty2 = texty;
+
+           // Opens a dialog for saving a file
+              QString fileName2 = QFileDialog::getSaveFileName(this, "Save as");
+
+              // An object for reading and writing files
+              QFile file2(fileName2);
+
+              // Try to open a file with write only options
+              if (!file2.open(QFile::WriteOnly | QFile::Text)) {
+                  QMessageBox::warning(this, "Warning", "Cannot save file: " + file2.errorString());
+                  return;
+              }
+
+              // Store the currentFile name
+              currentFile = fileName2;
+
+              // Set the title for the window to the file name
+              setWindowTitle(fileName2);
+
+              // Interface for writing text
+              QTextStream out(&file2);
+              out.setCodec("UTF-8");
+
+
+              // Output to file
+              out << texty;
+
+}
+
+
+void MainWindow::on_pushButton_20_clicked()
+{
+    int numm=rand() % 10 + 0;
+    QString tany;
+    tany.setNum(numm);
+    QMessageBox::warning(this, "Warning", tany);
+
 }
 
