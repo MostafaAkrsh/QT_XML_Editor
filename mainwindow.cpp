@@ -14,6 +14,8 @@
 #include "QStack"
 #include "QMap"
 #include "QDateTime"
+QVector<QString> attrT;
+QVector<QTreeWidgetItem*> sons;
 
 bool tito = false;
 MainWindow::MainWindow(QWidget *parent)
@@ -21,8 +23,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->treeWidget->setColumnCount(4);
+    ui->treeWidget->header()->resizeSection(0,200);
+    ui->treeWidget->header()->resizeSection(3,1000);
 
-    AddRoot("hello", "world");
 }
 
 MainWindow::~MainWindow()
@@ -33,11 +37,48 @@ MainWindow::~MainWindow()
 void MainWindow::AddRoot(QString name, QString Description)
 {
     QTreeWidgetItem* itm = new QTreeWidgetItem(ui->treeWidget);
+   // itm->setText(0,name);
+  //  itm->setText(1,Description);
+  //  ui->treeWidget->addTopLevelItem(itm);
 }
 
-void MainWindow::AddChild(QTreeWidgetItem* parent, QString name , QString Description )
+void MainWindow::AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString> attrTag, QVector<QString> attrVal, QString data )
 {
+    QTreeWidgetItem* itm = new QTreeWidgetItem(parent);
+    QString at= "[";
 
+    for ( int i = 0 ; i < attrTag.size() ; i++ )
+    {
+        at += attrTag[i];
+
+        if(i != attrTag.size() - 1) at+=" , ";
+    }
+
+    at +="]";
+
+    QString av= "";
+
+    av +="[";
+
+    for ( int i = 0 ; i < attrVal.size() ; i++ )
+    {
+        av += attrVal[i];
+
+        if(i != attrVal.size() - 1) av+=" , ";
+
+    }
+
+    av +="]";
+
+
+    itm->setText(0,tag);
+    itm->setText(1,at);
+    itm->setText(2,av);
+    itm->setText(3,data);
+
+    ui->treeWidget->addTopLevelItem(itm);
+
+    sons.push_back(itm);
 }
 
 void MainWindow::on_openXML_PushButton_clicked()
@@ -53,7 +94,9 @@ void MainWindow::on_openXML_PushButton_clicked()
 void MainWindow::on_browse_PushButton_clicked()
 {
     t.~Tree();
-
+    ui->treeWidget->clear();
+    sons.clear();
+    AddChild(NULL,"root",attrT,attrT,"");
 
     ui->nodesinfo->setText("???");
 
@@ -183,7 +226,7 @@ void MainWindow::on_browse_PushButton_clicked()
                            s.push(getstring);
 
 
-
+                           AddChild(sons[parent.top()],getstring,att,attval,data);
                            t.insert(id,getstring,data,att,attval,parent.top(),level);
                            if (data == NULL)
                            {

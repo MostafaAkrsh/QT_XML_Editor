@@ -39,8 +39,9 @@ private slots:
 
     void on_saveJSON_PushButton_clicked();
 
+public:
     void AddRoot(QString name, QString Description);
-    void AddChild(QTreeWidgetItem* parent, QString name , QString Description );
+    void AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString> attrTag, QVector<QString> attrVal, QString data );
 
 private:
     Ui::MainWindow *ui;

@@ -1330,6 +1330,15 @@ background-color: green;
       <height>351</height>
      </rect>
     </property>
+    <property name="minimumSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
     <property name="styleSheet">
      <string notr="true">QHeaderView::section {         
     color: black;                               
@@ -1387,46 +1396,76 @@ QTreeView::item:selected {
  
 </string>
     </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="dragEnabled">
+     <bool>false</bool>
+    </property>
+    <property name="dragDropMode">
+     <enum>QAbstractItemView::NoDragDrop</enum>
+    </property>
+    <property name="defaultDropAction">
+     <enum>Qt::IgnoreAction</enum>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>false</bool>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <property name="headerHidden">
+     <bool>false</bool>
+    </property>
+    <attribute name="headerVisible">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerMinimumSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="headerDefaultSectionSize">
+     <number>100</number>
+    </attribute>
+    <attribute name="headerHighlightSections">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerShowSortIndicator" stdset="0">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="headerStretchLastSection">
+     <bool>false</bool>
+    </attribute>
     <column>
      <property name="text">
-      <string/>
+      <string>tag</string>
+     </property>
+     <property name="font">
+      <font>
+       <stylestrategy>NoAntialias</stylestrategy>
+      </font>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>dsdsa</string>
+      <string>attributes tags</string>
      </property>
     </column>
     <column>
      <property name="text">
-      <string>sda</string>
+      <string>attributes values</string>
      </property>
     </column>
-    <item>
+    <column>
      <property name="text">
-      <string>sdasd</string>
+      <string>data</string>
      </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>adsdsa</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>sadds</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>dsads</string>
-     </property>
-     <item>
-      <property name="text">
-       <string>dsdas</string>
-      </property>
-     </item>
-    </item>
+    </column>
    </widget>
   </widget>
  </widget>

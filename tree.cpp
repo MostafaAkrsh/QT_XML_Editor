@@ -4,6 +4,8 @@
 #include "global_objects.h"
 #include "QMap"
 #include "QQueue"
+#include "mainwindow.h"
+#include "QVector"
 
 Node::Node(int i , QString t , QString d , QVector<QString> at , QVector<QString> av , int l)
 {
@@ -229,4 +231,19 @@ void Tree::postOrderJson()
         postOrderJson(root);
     json += "}";
     }
+
+void Tree::Traverse(Node *t)
+    {
+        if ( t  != NULL )
+        {
+
+            for ( int i = 0 ; i < t->childern.size() ; i++)
+            {
+                postOrder(t->childern[i]);
+            }
+
+        }
+
+    }
+
 

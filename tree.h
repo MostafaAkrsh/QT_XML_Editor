@@ -4,6 +4,7 @@
 #define MAX 1000
 #include "qlist.h"
 #include "qvector.h"
+#include "mainwindow.h"
 class Node
 {
 public:
@@ -38,6 +39,11 @@ public:
     void postOrderJson(Node *t);
     void postOrderJson();
 
+    void Traverse(Node *t);
+    void Traverse();
+
+    void AddRoot(QString name, QString Description);
+    void AddChild(QTreeWidgetItem* parent, QString tag , QVector<QString> attrTag, QVector<QString> attrVal, QString data );
 
 };
 
