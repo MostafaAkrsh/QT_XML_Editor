@@ -7,8 +7,8 @@ class Compression
 public:
     Compression();
 
-   QString Compress(QString in);
-   QString Decompress(QString in);
+    QString Compress(QString in);
+    QString Decompress(QString in);
 
 
 

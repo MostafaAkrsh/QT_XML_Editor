@@ -7,26 +7,26 @@
 #include "mainwindow.h"
 #include "QVector"
 
+/* Constructor of the node */
 Node::Node(int i , QString t , QString d , QVector<QString> at , QVector<QString> av , int l)
 {
-        id = i;
-        tag = t;
-        data = d;
-        level = l;
-        attrTag = at;
-        attrVal = av;
+    id = i;
+    tag = t;
+    data = d;
+    level = l;
+    attrTag = at;
+    attrVal = av;
 }
 
+/* Destructor of the node */
 Node::~Node()
 {
-   /* for ( int i = 0 ; i < childern.size() ; i++ )
+    for ( int i = 0 ; i < childern.size() ; i++ )
     {
         delete childern[i];
     }
-    delete this;*/
+    delete this;
 }
-
-
 
 Tree::Tree()
 {
@@ -62,44 +62,46 @@ void Tree::insert(int id , QString tag , QString data, QVector<QString> attrTag 
     }
 }
 
-
+/* Used to make a xml string of a tree */
 void Tree::preOrder(Node* t)
+{
+    if ( t  != NULL )
     {
-        if ( t  != NULL )
-        {
-            for(int i = 0 ; i < t->level ; i++)
+        for(int i = 0 ; i < t->level ; i++)
             xml +="\t";
 
-            xml +='<'+t->tag+"";
+        xml +='<'+t->tag+"";
 
-            for (int i = 0 ; i < t->attrTag.size(); i++){
+        for (int i = 0 ; i < t->attrTag.size(); i++){
             if(t->attrVal[i] != NULL)
                 xml += " " + t->attrTag[i]+"=\""+t->attrVal[i]+"\"";
-            }
-
-            xml +=">";
-
-            xml += "\n";
-            if(t->data != NULL)
-            {
-                for(int i = 0 ; i < t->level ; i++)
-                xml +="\t       ";
-            }
-            xml +=t->data;
-            if(t->data != NULL)
-                xml += "\n";
-            for ( int i = 0 ; i < t->childern.size() ; i++)
-            {
-                preOrder(t->childern[i]);
-            }
-            for(int i = 0 ; i < t->level ; i++)
-            xml +="\t";
-            xml += "</"+t->tag+'>'+"\n";
         }
 
+        xml +=">";
+
+        xml += "\n";
+        if(t->data != NULL)
+        {
+            for(int i = 0 ; i < t->level ; i++)
+                xml +="\t       ";
+        }
+        xml +=t->data;
+        if(t->data != NULL)
+            xml += "\n";
+        for ( int i = 0 ; i < t->childern.size() ; i++)
+        {
+            preOrder(t->childern[i]);
+        }
+        for(int i = 0 ; i < t->level ; i++)
+            xml +="\t";
+        xml += "</"+t->tag+'>'+"\n";
     }
+
+}
+
+/* construct a mini xml string */
 void Tree::preOrderMini(Node *t)
-    {
+{
 
     if ( t  != NULL )
     {
@@ -107,8 +109,8 @@ void Tree::preOrderMini(Node *t)
         xml +='<'+t->tag+"";
 
         for (int i = 0 ; i < t->attrTag.size(); i++){
-        if(t->attrVal[i] != NULL)
-            xml += " " + t->attrTag[i]+"=\""+t->attrVal[i]+"\"";
+            if(t->attrVal[i] != NULL)
+                xml += " " + t->attrTag[i]+"=\""+t->attrVal[i]+"\"";
         }
 
         xml +=">";
@@ -127,123 +129,129 @@ void Tree::preOrderMini(Node *t)
         xml += "</"+t->tag+'>';
     }
 
-    }
+}
 
+/* function can be called in program */
 void Tree::preOrder()
-    {
+{
     xml = "";
 
-        preOrder(root);
-    }
+    preOrder(root);
+}
 
 
 void Tree::preOrderMini()
-    {
+{
     xml = "";
 
-        preOrderMini(root);
-    }
+    preOrderMini(root);
+}
+
 bool figo = 0;
 bool first = 1;
+
 QMap<QString,int> m;
 QVector<int>final;
+
+/* function for construct json file */
 void Tree::preOrderJson(Node* t)
+{
+
+    if ( t  != NULL )
     {
 
-        if ( t  != NULL )
-        {
-
-            for(int i = 0 ; i < t->level ; i++)
+        for(int i = 0 ; i < t->level ; i++)
             json +="\t";
 
-            if(m[t->tag] == 0 || t->tag == "frame")
-            {
-                json +="\""+t->tag+"\": ";
-                if( t->data == NULL )
+        if(m[t->tag] == 0 || t->tag == "frame")
+        {
+            json +="\""+t->tag+"\": ";
+            if( t->data == NULL )
 
-                    if(t->tag !="frame")
-                final.push_back(t->childern.size());
-            }
+                if(t->tag !="frame")
+                    final.push_back(t->childern.size());
+        }
 
-            if(m[t->tag] != 0) {
+        if(m[t->tag] != 0) {
 
-                if(t->tag == "frame") ;
-                else json +=",";
+            if(t->tag == "frame") ;
+            else json +=",";
 
-                first = 0;
+            first = 0;
 
-            }
+        }
 
-            m[t->tag]++;
+        m[t->tag]++;
 
-            if (t->data != NULL)
-            {
+        if (t->data != NULL)
+        {
             json +="\""+t->data+"\"";
             m[t->tag]--;
-            }
+        }
 
-            if(t->data == NULL)
-            {
+        if(t->data == NULL)
+        {
             if(m[t->tag] != 0 && first == 1 && t->id != 1) xml += "[{ \n";
             else json += "{ \n";
-            }
-            for ( int i = 0 ; i < t->childern.size() ; i++)
+        }
+        for ( int i = 0 ; i < t->childern.size() ; i++)
+        {
+            if( i == t->childern.size() - 1)
             {
-                if( i == t->childern.size() - 1)
-                {
-                    figo = 1;
-                }
-                preOrderJson(t->childern[i]);
+                figo = 1;
             }
+            preOrderJson(t->childern[i]);
+        }
 
-            if(t->data != NULL && figo != 1)
+        if(t->data != NULL && figo != 1)
             json += ",";
 
-            figo = 0;
+        figo = 0;
 
         //
-        }
-        if(json.right(1) != "\n")
+    }
+    if(json.right(1) != "\n")
         json += "\n";
 
-        if(t->data == NULL){
+    if(t->data == NULL){
         for(int i = 0 ; i < t->level ; i++)
-        json +="\t";
+            json +="\t";
         if(final.size() > 2){
 
-        if(m[t->tag] == final[final.size() - 2] )
-        {
-            json+= "    }]\n";
-            final.pop_back();
-        }
+            if(m[t->tag] == final[final.size() - 2] )
+            {
+                json+= "    }]\n";
+                final.pop_back();
+            }
         }
         else json += "    }\n";
 
-    first = 1;
+        first = 1;
 
-        }
     }
+}
 
+/* function to be called */
 void Tree::preOrderJson()
-    {
+{
     json = "";
     json += "{ \n";
-        preOrderJson(root);
+    preOrderJson(root);
     json += "}";
-    }
+}
 
 void Tree::Traverse(Node *t)
+{
+    if ( t  != NULL )
     {
-        if ( t  != NULL )
+
+        for ( int i = 0 ; i < t->childern.size() ; i++)
         {
-
-            for ( int i = 0 ; i < t->childern.size() ; i++)
-            {
-                preOrder(t->childern[i]);
-            }
-
+            preOrder(t->childern[i]);
         }
 
     }
+
+}
 
 
